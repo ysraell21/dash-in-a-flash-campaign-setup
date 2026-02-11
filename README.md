@@ -695,7 +695,47 @@ INSERT INTO campaign (
 )
 ```
 
-##### n8n set-up: 
-- [ https://workflows.qa.dash-hk.com/workflow/aeObrO3eL0Ib9CgJ ]
-  - update this workflow to cater the destination lat & lng
-- 
+##### n8n set-up:
+### Global Modules:
+-  https://workflows.qa.dash-hk.com/workflow/aeObrO3eL0Ib9CgJ 
+    - update this workflow to cater the destination lat & lng
+- https://workflows.qa.dash-hk.com/workflow/9ZcaHto32lmuyYDb
+    - worklow that handles the sending of push notif or inbox message
+- https://workflows.qa.dash-hk.com/workflow/JWsqGORIaDUMFE3X
+    - workflow that responsible for setting up the discount to the user
+
+### DASH-3064 Modules:
+- https://workflows.qa.dash-hk.com/workflow/lIDFTLpxt5Stp5JZ
+    - this module is responsible for setting up the needed params ( i18n, banner, etc... )
+- https://workflows.qa.dash-hk.com/workflow/hciVgz5NiJhnroxK
+    - this module is used to prepare the needed layout of the dialog that would be send to the user if no driver accepted ( remind user to keep waiting )
+- https://workflows.qa.dash-hk.com/workflow/Fs0FjF7cV0ixYjbq
+    - this module is used to prepare the needed msg to be display ( if app is on foreground or in background )
+
+### DASH-3064:
+- https://workflows.qa.dash-hk.com/workflow/53zvvTbyUxcC2BCX
+    - this workflow is responsible for the default banner display of the user
+
+### DASH-3064 Triggers:
+- https://workflows.qa.dash-hk.com/workflow/9zJ5s2sjQbhc8fRx
+    - trigger when the driver accepted the order
+- https://workflows.qa.dash-hk.com/workflow/Z3YxWM4rGPYawzwm
+    - this trigger help to identify if needed to remind the user or not
+- https://workflows.qa.dash-hk.com/workflow/jPtVkjqP4rIbalUk
+    - this trigger when order change to pending and it remind the user
+- https://workflows.qa.dash-hk.com/workflow/7BlcsYWkggLyNPQW
+    - this trigger for the second and third follow-up reminders ( this call the module '[module] Patience after time snack bar' which is responsible for the neede msg to display ( app is on foreground or in background )
+- https://workflows.qa.dash-hk.com/workflow/UoMJbJpaw50mkBDu
+    - this trigger when trip end ( also responsible for issuing a campaign discount and sending notification )
+
+### DASH-3286 Modules:
+- https://workflows.qa.dash-hk.com/workflow/SHI32OqvbMwcoSFXqbgJ7
+    - this module is responsible for setting up the polygons of the "Quarry Bay", "Quarry Bay / Taikoo CBD", and "North Point"
+- https://workflows.qa.dash-hk.com/workflow/QelFyPtbg8QBLy4W
+    - this module is responsible for setting up the neede params ( origin lat/lng and destination lat/lng )
+- https://workflows.qa.dash-hk.com/workflow/M0CCT4ws8DlGzylT
+    - this module check if the given params are within the defined campaign area
+
+### DASH-3286 Triggers:
+- https://workflows.qa.dash-hk.com/workflow/ZSBoP0vv0h5MxWg
+    - responsible for the updating the banner to be display based on the total trips within the campaign area 
