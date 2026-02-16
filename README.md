@@ -699,7 +699,7 @@ INSERT INTO campaign (
 ### Global Modules:
 -  https://workflows.qa.dash-hk.com/workflow/aeObrO3eL0Ib9CgJ 
     - update this workflow to cater the destination lat & lng
-- https://workflows.qa.dash-hk.com/workflow/9ZcaHto32lmuyYDb
+- https://workflows.qa.dash-hk.com/workflow/P204M8985d7Rdn7T
     - worklow that handles the sending of push notif or inbox message
 - https://workflows.qa.dash-hk.com/workflow/JWsqGORIaDUMFE3X
     - workflow that responsible for setting up the discount to the user
