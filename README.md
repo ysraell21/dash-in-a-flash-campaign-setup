@@ -737,5 +737,5 @@ INSERT INTO campaign (
     - this module check if the given params are within the defined campaign area
 
 ### DASH-3286 Triggers:
-- https://workflows.qa.dash-hk.com/workflow/ZSBoP0vv0h5MxWg
+- https://workflows.qa.dash-hk.com/workflow/ZSBoP0vv0h5MxWgl
     - responsible for the updating the banner to be display based on the total trips within the campaign area 
